@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300:400');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500');
 @font-face {
     font-family: 'Prime';
     src: url('assets/fonts/PrimeRegular.eot') format('embedded-opentype'), url('assets/fonts/PrimeRegular.woff2') format('woff2'), url('assets/fonts/PrimeRegular.woff') format('woff'), url('assets/fonts/PrimeRegular.ttf') format('truetype');
@@ -20,16 +22,15 @@ body {
     height: 100%;
     margin: 0;
     flex-flow: row wrap;
-    background-color: #263238;
+    /* background-color: #263238; */
 }
 
 .flex-item {
     /* background-color: #00897B; */
-    align-self: center;
-    color: whitesmoke;
-    /* padding: 1rem;
+        /* padding: 1rem;
     margin: 1rem; */
-    width: 38%;
+    align-self: center;
+    width: auto;
     height: 90%;
     overflow: auto;
 }
@@ -45,26 +46,27 @@ body {
 .name {
     padding-top: 1.4rem;
     text-transform: uppercase;
-    color: #FAFAFA;
+    color: #212121;
     font-family: 'Prime', sans-serif;
     font-size: 2rem;
 }
 
 #clock {
-    color: #FAFAFA;
-    font-family: sans-serif;
+    color: #212121;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.8rem;
     padding-top: 1rem;
 }
 
 .todo-card {
-    /* background: #F5F5F5; */
-    margin: 1.4rem; 
-    /* color: #212121; */
+    margin: 1rem;
+    /* background: #f5f5f5;
+    color: #212121; */
 }
 
 .todo-title {    
-    font-family: 'mononoki', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     padding: 1.5rem;
     font-size: 1.4rem;
+    color: #212121;
 }

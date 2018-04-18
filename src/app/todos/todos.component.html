@@ -1,7 +1,12 @@
 <div class="todo-title">//TODO:</div>
-<mat-card *ngFor= "let todo of todos" class="todo-card">
-  <mat-card-title class="task">{{todo.task}}</mat-card-title>
-  <mat-divider></mat-divider>
-  <mat-card-footer class="by">{{todo.by}}</mat-card-footer>
-  <mat-card-actions align="end">Done</mat-card-actions>
+<!-- <div *ngFor= "let todo of todos" class="todo-card">
+  <div class="task">{{todo.task}}</div>  
+  <div class="by">{{todo.by}}</div>
+</div> -->
+
+<mat-card *ngFor="let todo of todos" class="todo-card">
+  <mat-card-header>
+    <mat-card-title class="task">{{todo.task}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-subtitle class="by">{{todo.by}}</mat-card-subtitle>
 </mat-card>

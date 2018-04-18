@@ -8,7 +8,6 @@ import { TODOS } from '../mock-todos';
 export class TodosComponent implements OnInit {
   todos = TODOS;
   constructor() { }
-
   ngOnInit() {
   }
 

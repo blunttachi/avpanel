@@ -31,4 +31,5 @@ import { ClockService } from './clock.service';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

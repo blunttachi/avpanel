@@ -8,4 +8,6 @@ export const TODOS: Todo[] = [
     {task: "You cannot have a positive life and a negative mind.", by: "Joyce Meyer"},
     {task: "When you think positive, good things happen.", by: "Matt Kemp"},
     {task: "Trust in dreams, for in them is hidden the gate to eternity.", by: "Khalil Gibran"},
+    {task: "You only live once, but if you do it right, once is enough.", by: "Mae West"},
+    {task: "I find television very educating. Every time somebody turns on the set, I go into the other room and read a book.", by: "Groucho Marx"},
 ];

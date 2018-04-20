@@ -1,5 +1,4 @@
 import { Component, OnInit, enableProdMode } from '@angular/core';
-import { TODOS } from '../mock-todos';
 import { get } from 'selenium-webdriver/http';
 @Component({
   selector: 'app-todos',
@@ -7,12 +6,18 @@ import { get } from 'selenium-webdriver/http';
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent implements OnInit {
-  todos = TODOS;
+  todos = this.getData();
+  
+  
   constructor() { }
   ngOnInit() {
-    
+  }
+
+  getData() {
+        
     var xhttp = new XMLHttpRequest();
-    var data;
+    var json;
+    var data = new Array();
     xhttp.overrideMimeType("application/json");
     xhttp.open("GET", 'assets/todos.json', true);
     xhttp.onreadystatechange = function () {
@@ -20,15 +25,18 @@ export class TodosComponent implements OnInit {
       var OK = 200; // status 200 is a successful return.
       if (xhttp.readyState === DONE) {
         if (xhttp.status === OK) {
-          data = JSON.parse(xhttp.responseText);
-          console.log(data.todo.task); // 'This is the output.'
+          json = JSON.parse(xhttp.responseText);
+          for (var x in json.todo){
+            data.push(json.todo[x]);
+          }
+          console.log(data); // 'This is the output.'
         } else {
           console.log('Error: ' + xhttp.status); // An error occurred during the request.
         }
       }
     };
-    
     xhttp.send(null);
+    return data;
   }
 
 }

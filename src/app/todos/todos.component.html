@@ -1,8 +1,20 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 <div class="todo-title">//TODO:</div>
+<mat-form-field class="todo-input">
+  <textarea matInput #task placeholder="Add a TODO" matTextareaAutosize matAutosizeMinRows="1"
+            matAutosizeMaxRows="5"></textarea>
+  <button (click)="setTodo(task.value); task.value=''" mat-button matSuffix mat-icon-button color="primary" aria-label="Add" *ngIf=task.value>
+    <mat-icon>add_circle</mat-icon>
+  </button>
+</mat-form-field>
 
 <mat-card *ngFor="let todo of todos" class="todo-card">
   <mat-card-header>
     <mat-card-title class="task">{{todo.task}}</mat-card-title>
   </mat-card-header>
-  <mat-card-subtitle class="by">{{todo.by}}</mat-card-subtitle>
+  <mat-card-subtitle class="created">{{todo.created | date: "EE, d MMM, HH:mm": "+0200"}}</mat-card-subtitle>
+  <mat-card-actions>
+    <button (click)="removeTodo(todo)" mat-button>DONE</button>
+  </mat-card-actions>
 </mat-card>

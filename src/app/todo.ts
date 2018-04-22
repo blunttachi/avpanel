@@ -1,4 +1,5 @@
-export class Todo {
+export interface Todo {
+  _id: string;
   task: string;
-  by: string;
+  created: Date;
 }

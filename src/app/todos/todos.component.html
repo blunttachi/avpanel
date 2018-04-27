@@ -13,8 +13,14 @@
   <mat-card-header>
     <mat-card-title class="task">{{todo.task}}</mat-card-title>
   </mat-card-header>
-  <mat-card-subtitle class="created">{{todo.created | date: "EE, d MMM, HH:mm": "+0200"}}</mat-card-subtitle>
-  <mat-card-actions>
-    <button (click)="removeTodo(todo)" mat-button>DONE</button>
+  <mat-card-subtitle style="padding-left: 0.6rem" class="created">{{todo.created | date: "EE, d MMM, HH:mm": "+0200"}}</mat-card-subtitle> 
+  
+  <mat-card-actions align="end">
+      
+    <button  (click)="removeTodo(todo)" mat-button>DONE</button>
   </mat-card-actions>
+ 
+     
+
+  
 </mat-card>

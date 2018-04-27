@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300:400');
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500');
 @font-face {
@@ -22,7 +22,13 @@ body {
     height: 100%;
     margin: 0;
     flex-flow: row wrap;
-    /* background-color: #263238; */
+    background :  linear-gradient(
+        rgba(24, 24, 24, 0.699), 
+        rgba(51, 51, 51, 0.747)
+      ), url('assets/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+     
 }
 
 .flex-item {
@@ -46,13 +52,15 @@ body {
 .name {
     padding-top: 1.4rem;
     text-transform: uppercase;
-    color: #212121;
+    /* color: #212121; */
+    color: #f5f5f5;
     font-family: 'Prime', sans-serif;
     font-size: 2rem;
 }
 
 #clock {
-    color: #212121;
+    /* color: #212121; */
+    color: #f5f5f5;
     font-family: 'Roboto', sans-serif;
     font-size: 1.8rem;
     padding-top: 1rem;
@@ -67,6 +75,7 @@ body {
 .todo-input {
     width: 50%;
     padding-left: 1rem;
+    color: #f5f5f5;
     padding-right: 1rem;
 }
 
@@ -74,5 +83,6 @@ body {
     font-family: 'IBM Plex Mono', monospace;
     padding: 1rem;
     font-size: 1.4rem;
-    color: #212121;
+    color: #f5f5f5;
+    /* color: #212121; */
 }

@@ -1,0 +1,20 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<!-- <div class="todo-title">//TODO:</div> -->
+<mat-form-field class="todo-input">
+  <textarea matInput #reminder placeholder="Add a reminder" matTextareaAutosize matAutosizeMinRows="1"
+            matAutosizeMaxRows="5"></textarea>
+  <button (click)="setReminder(reminder.value); reminder.value=''" mat-button matSuffix mat-icon-button color="primary" aria-label="Add" *ngIf=reminder.value>
+    <mat-icon>add_circle</mat-icon>
+  </button>
+</mat-form-field>
+
+<mat-list>
+  <h3 mat-subheader>Reminders</h3>
+  <mat-list-item style="width:30rem"  *ngFor="let reminder of reminders">
+    <mat-icon mat-list-icon>notifications</mat-icon>
+    <h4 mat-line style="white-space: normal;">{{reminder.task}}</h4>
+    <p mat-line> {{reminder.date | date: "EE, d MMM, HH:mm"}}</p>
+    <button mat-button (click)="removeReminder(reminder)">Remove</button>
+  </mat-list-item>
+</mat-list>

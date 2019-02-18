@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var todosRouter = require('./routes/todos');
+var remindersRouter = require('./routes/reminders');
 
 var app = express();
 
@@ -26,12 +27,13 @@ app.use(function(req, res, next) {
 });
 app.use('/', indexRouter);
 app.use('/todos', todosRouter);
+app.use('/reminders', remindersRouter);
 
 var mongoose = require('mongoose');
 // Use native Node promises
 mongoose.Promise = global.Promise;
 // connect to MongoDB
-mongoose.connect('mongodb://localhost/todos')
+mongoose.connect('mongodb://localhost')
   .then(() =>  console.log('connection succesful'))
   .catch((err) => console.error(err));
 

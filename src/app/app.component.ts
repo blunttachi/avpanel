@@ -10,13 +10,13 @@ import { Subscription } from 'rxjs';
 export class AppComponent {
   
   time: Date;
+  interval: any;
   private _clockSubscription: Subscription;
   constructor(private clockService: ClockService) { }
 
   ngOnInit(): void {
     this._clockSubscription = this.clockService.getClock().subscribe(time => this.time = time);
   }
-
   ngOnDestroy(): void {
     this._clockSubscription.unsubscribe();
   }

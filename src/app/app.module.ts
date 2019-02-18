@@ -11,13 +11,17 @@ import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
 import { ClockService } from './clock.service';
 import { TodoService } from './todos/todo.service';
+import { MatListModule } from '@angular/material/list';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { RemindersComponent } from './reminders/reminders.component';
+import { ReminderService } from './reminders/reminder.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TodosComponent,
+    RemindersComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +29,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     NoopAnimationsModule,
     MatCardModule,
+    MatListModule,
     MatButtonModule,
     MatInputModule,
     MatIconModule,
@@ -32,7 +37,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   providers: [
     HttpClientModule,
     ClockService,
-    TodoService
+    TodoService,
+    ReminderService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,6 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-<div class="todo-title">//TODO:</div>
+<!-- <div class="todo-title">//TODO:</div> -->
 <mat-form-field class="todo-input">
   <textarea matInput #task placeholder="Add a TODO" matTextareaAutosize matAutosizeMinRows="1"
             matAutosizeMaxRows="5"></textarea>
@@ -9,7 +9,17 @@
   </button>
 </mat-form-field>
 
-<mat-card *ngFor="let todo of todos" class="todo-card">
+<mat-list>
+  <h3 mat-subheader>Todos</h3>
+  <mat-list-item style="width:30rem" *ngFor="let todo of todos">
+    <mat-icon mat-list-icon>event_note</mat-icon>
+    <h4 mat-line style="white-space: normal;">{{todo.task}}</h4>
+    <!-- <p mat-line> {{todo.created | date: "EE, d MMM, HH:mm": "+0200"}}</p> -->
+    <button mat-button (click)="removeTodo(todo)">Done</button>
+  </mat-list-item>
+</mat-list>
+
+<!-- <mat-card *ngFor="let todo of todos" class="todo-card">
   <mat-card-header>
     <mat-card-title class="task">{{todo.task}}</mat-card-title>
   </mat-card-header>
@@ -19,8 +29,4 @@
       
     <button  (click)="removeTodo(todo)" mat-button>DONE</button>
   </mat-card-actions>
- 
-     
-
-  
-</mat-card>
+</mat-card> -->

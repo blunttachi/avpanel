@@ -13,11 +13,14 @@ import { TodoService } from './todo.service';
 
 export class TodosComponent implements OnInit {
   todos: Todo[]; //where todos are being returned
-
+  interval: any;
   constructor(private todoService: TodoService) {}
 
   ngOnInit() {
     this.getTodos();
+    this.interval = setInterval(() => { 
+      this.getTodos(); 
+    }, 1000*60);
   }
 
   getTodos(): void {

@@ -27,7 +27,7 @@
     "express": "^4.16.3",
     "express-generator": "^4.16.0",
     "lowdb": "^1.0.0",
-    "mongoose": "^5.0.15",
+    "mongoose": "^5.4.13",
     "node-mysql": "^0.4.2",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
@@ -47,7 +47,7 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "protractor": "~5.1.2",
+    "protractor": "^5.4.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
     "typescript": "~2.5.3"
